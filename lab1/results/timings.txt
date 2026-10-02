@@ -1,0 +1,13 @@
+image: C:\Users\aleks\vsproject\itmo_projects\cv_projects\lab1\images\test.png
+size: 400x300
+python_seconds: 0.985061
+opencv_seconds: 0.006823
+python_repeats: 3
+opencv_repeats: 10
+mean_abs_diff_inner: 2.430e-15
+max_abs_diff_inner: 1.137e-13
+
+size	python_s	opencv_s
+140x105	0.074763	0.000193
+240x180	0.214839	0.001088
+400x300	0.985061	0.006823
