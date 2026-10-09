@@ -53,7 +53,10 @@ def process_video(video_path, results_dir, label):
 
     shots_dir = results_dir / "shots"
     shots_dir.mkdir(parents=True, exist_ok=True)
-    out_path = results_dir / f"{video_path.stem}.mp4"
+    # Не писать результат в тот же файл, что и исходное видео.
+    out_path = results_dir / f"{video_path.stem}_tracked.mp4"
+    if out_path.resolve() == video_path.resolve():
+        out_path = results_dir / f"{video_path.stem}_out.mp4"
     writer = open_writer(out_path, fps, (width, height))
 
     found = 0

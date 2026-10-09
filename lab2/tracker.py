@@ -146,7 +146,9 @@ def box_is_ok(corners, width, height):
 
 def draw_box(frame, corners, label):
     points = np.int32(corners).reshape(-1, 2)
-    cv2.polylines(frame, [points], True, (40, 220, 40), 2, cv2.LINE_AA)
+    # Чёрная подложка, чтобы рамка была видна и на светлом столе, и на обложке.
+    cv2.polylines(frame, [points], True, (0, 0, 0), 8, cv2.LINE_AA)
+    cv2.polylines(frame, [points], True, (40, 220, 40), 4, cv2.LINE_AA)
 
     top_index = int(np.argmin(points[:, 1]))
     x = int(points[top_index, 0])

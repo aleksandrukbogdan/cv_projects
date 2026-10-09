@@ -16,3 +16,4 @@ env/
 # Видео курса, к лабораторной не относятся
 data/
 *.mp4
+!lab2/results/*_tracked.mp4
