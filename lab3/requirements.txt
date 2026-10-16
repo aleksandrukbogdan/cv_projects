@@ -1,0 +1,11 @@
+# torch и torchvision ставятся отдельно, сборкой с CUDA:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+diffusers>=0.32
+transformers>=4.44
+accelerate>=0.33
+safetensors
+pyiqa
+opencv-python-headless
+matplotlib
+Pillow
+numpy
